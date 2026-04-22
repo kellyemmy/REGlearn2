@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* --- Range Slider CSS --- */
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 999px;
+    background: #e5e7eb; /* Base gray track */
+    outline: none;
+}
+
+/* WebKit (Chrome, Safari, Edge) Thumb */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background: #eab308; /* Gold Thumb */
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.1s;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+}
+
+/* Firefox Thumb */
+input[type=range]::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    background: #eab308;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* --- Custom CSS Toggle Switch --- */
+input:checked ~ .dot {
+    transform: translateX(100%);
+}
+
+input:checked ~ .toggle-bg {
+    background-color: #1e3a8a; /* Royal Blue when checked */
+}
